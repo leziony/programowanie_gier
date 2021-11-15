@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Strzelanie : MonoBehaviour
+public class Pocisk : MonoBehaviour
 {
     Rigidbody2D pocisk;
     // Start is called before the first frame update
