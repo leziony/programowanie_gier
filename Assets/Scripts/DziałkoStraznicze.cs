@@ -23,7 +23,7 @@ public class DziałkoStraznicze : MonoBehaviour
     {
         if (alive == true)
         {
-            animator.Play("Shoot");
+           animator.Play("Shoot");
             if (delay == 0)
             {
                 GameObject pocisk1 = (GameObject)Instantiate(Pocisk);

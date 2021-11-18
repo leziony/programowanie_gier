@@ -4,6 +4,38 @@ using UnityEngine;
 
 public class Pocisk : MonoBehaviour
 {
+    [SerializeField] private float attackCooldown;
+    private Animator anim;
+    private RuchPostaci ruch;
+    private float cooldownTimer = Mathf.Infinity;
+
+    private void Update()
+    {
+        if (Input.GetMouseButton(0) && cooldownTimer>attackCooldown && RuchPostaci.canAttack())
+            Attack();
+
+        cooldownTimer += Time.deltaTime;
+    }
+
+
+    private void Attack()
+    {
+        anim.SetTrigger("attack");
+        cooldownTimer = 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     Rigidbody2D pocisk;
     // Start is called before the first frame update
     void Start()
@@ -28,4 +60,5 @@ public class Pocisk : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    */
 }
